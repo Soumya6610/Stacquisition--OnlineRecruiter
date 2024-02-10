@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="login" class="p.LoginAction" method="LoginData">
+			<result name="admin">/admin.jsp</result>
+			<result name="jobseeker">/jobseekerhome.jsp</result>
+			<result name="company">/companyhome.jsp</result>
+			<result name="loginfail">/login.jsp</result>
+			<result name="companyregd">/companyregd.jsp</result>
+			<result name="Acompanydetails">/Acompanydetails.jsp</result>
+
+
+		</action>
+
+
+		<action name="logout" class="p.LoginAction" method="Logout">
+			<result name="Logout">Logout.jsp</result>
+		</action>
+
+		<action name="euserlogin" class="p.LoginAction"
+			method="euserlogin">
+			<result name="euserlogin">home.jsp</result>
+		</action>
+
+
+
+		<action name="registerhome" class="p.LoginAction"
+			method="ALIST">
+			<result name="registersuccess">/register.jsp</result>
+		</action>
+
+		<action name="register1" class="p.UploadDownload"
+			method="upload">
+			<!-- <interceptor-ref name="fileUpload"> <param name="maximumSize">2097152</param> 
+				<param name="allowedTypes"> application/msword </param> </interceptor-ref> 
+				<interceptor-ref name="defaultStack"></interceptor-ref> -->
+			<result name="registersuccess">/register.jsp</result>
+		</action>
+		<action name="registerbank" class="p.LoginAction"
+			method="registerbank">
+			<result name="success">/register1.jsp</result>
+
+		</action>
+
+		<action name="combo1" class="p.LoginAction" method="combo1">
+			<result name="success">/combo1.jsp</result>
+		</action>
+		<action name="showjobseek" class="p.LoginAction"
+			method="showjobseek">
+			<result name="displayuser1">/jobseekerdetails.jsp</result>
+		</action>
+		<action name="combo3" class="p.LoginAction" method="combo3">
+			<result name="success">/combo3.jsp</result>
+		</action>
+		<action name="adddelete" class="p.LoginAction"
+			method="adddelete">
+			<result name="displayuser1">/AddDelJobseeker.jsp</result>
+		</action>
+		<action name="add" class="p.LoginAction" method="add">
+			<result name="success">/combo3.jsp</result>
+		</action>
+		<action name="delete" class="p.LoginAction" method="delete">
+			<result name="success">/combo3.jsp</result>
+		</action>
+
+
+		<action name="combo2" class="p.LoginAction" method="combo2">
+			<result name="success">/combo2.jsp</result>
+		</action>
+
+		<action name="showcompany" class="p.LoginAction"
+			method="showcompany">
+			<result name="displayuser2">/Acompanydetails.jsp</result>
+		</action>
+
+
+
+		<action name="approveCompany" class="p.LoginAction"
+			method="approveCompany">
+			<result name="success">/ApproveRejectCompany.jsp</result>
+		</action>
+		<action name="RejectCompany" class="p.LoginAction"
+			method="reject">
+			<result name="success">/ApproveRejectCompany.jsp</result>
+		</action>
+
+
+
+
+		<action name="registercomp" class="p.LoginAction"
+			method="Registercomp">
+			<result name="registersuccess">/companyregd.jsp</result>
+		</action>
+
+
+
+
+
+		<action name="approverejcompany" class="p.LoginAction"
+			method="approverejcompany">
+			<result name="displayuser2">/ApproveRejectCompany.jsp</result>
+		</action>
+
+		<action name="companyview" class="p.LoginAction"
+			method="companyview">
+			<result name="displayuser2">/Acompanydetails.jsp</result>
+		</action>
+
+
+
+
+		<action name="updatecompany" class="p.LoginAction"
+			method="updatecompany">
+			<result name="displayuser2">/companyview.jsp</result>
+		</action>
+
+		<action name="updatecompanydetail" class="p.LoginAction"
+			method="updatecompanydetail">
+			<result name="success">/companyview.jsp</result>
+		</action>
+
+		<action name="registerexam" class="p.LoginAction"
+			method="registerexam">
+			<result name="success">/examcreation.jsp</result>
+		</action>
+
+
+		<action name="jobseekeracc" class="p.LoginAction"
+			method="jobseekeracc">
+			<result name="displayuser1">/jobseekeracc.jsp</result>
+		</action>
+
+
+		<action name="jobseekeracc1" class="p.LoginAction"
+			method="jobseekeracc1">
+			<result name="displayuser1">/jobseekeracc.jsp</result>
+		</action>
+
+		<action name="jobseekerview1" class="p.LoginAction"
+			method="jobseekerview1">
+			<result name="displayuser1">/jobseekeredit.jsp</result>
+		</action>
+
+		<action name="jobseekerview" class="p.LoginAction"
+			method="jobseekerview">
+			<result name="displayuser1">/jobseekeredit.jsp</result>
+		</action>
+
+		<action name="jobseekeredit" class="p.LoginAction"
+			method="jobseekeredit">
+			<result name="update">/jobseekeredit.jsp</result>
+		</action>
+
+
+		<action name="addjobnw" class="p.LoginAction" method="addjobnw">
+			<result name="success">/AddJobDetails.jsp</result>
+		</action>
+
+
+
+		<action name="viewjobdetails" class="p.LoginAction"
+			method="viewjobdetails">
+			<result name="success">/viewjobdetails.jsp</result>
+		</action>
+
+
+		<action name="EditJobDetail" class="p.LoginAction"
+			method="EditJobDetail">
+			<result name="success">/viewjobdetailsconfirm.jsp</result>
+		</action>
+
+
+
+		<action name="showcompanyname" class="p.LoginAction"
+			method="showcompanyname">
+			<result name="success">/campusschedule.jsp</result>
+		</action>
+
+		<action name="updatejob" class="p.LoginAction"
+			method="updatejob">
+			<result name="success">/viewjobdetails.jsp</result>
+		</action>
+
+
+		<action name="view" class="p.example" method="viewjobdetails">
+			<result name="success">/viewjobdetails.jsp</result>
+		</action>
+
+		<action name="DeleteJobDetail" class="p.LoginAction"
+			method="DeleteJobDetail">
+			<result name="success">/viewjobdetails.jsp</result>
+		</action>
+
+
+		<action name="registerexam" class="p.LoginAction"
+			method="registerexam">
+			<result name="success">/examcreation.jsp</result>
+		</action>
+
+
+		<action name="viewexam" class="p.LoginAction" method="viewexam">
+			<result name="viewexam">/examview.jsp</result>
+		</action>
+
+
+		<action name="examview" class="p.LoginAction" method="examview">
+			<result name="examview">/examview.jsp</result>
+		</action>
+
+		<action name="Deleteexam" class="p.LoginAction"
+			method="Deleteexam">
+			<result name="success">/examview.jsp</result>
+		</action>
+
+
+		<action name="change_password" class="p.LoginAction"
+			method="changePassword">
+			<result name="success">/changepassword.jsp</result>
+		</action>
+
+		<action name="change_password1" class="p.LoginAction"
+			method="changePassword1">
+			<result name="success">/changepassword1.jsp</result>
+		</action>
+
+
+
+		<action name="userlogin" class="p.LoginAction"
+			method="userlogin">
+			<result name="userlogin">/login.jsp</result>
+		</action>
+
+		<action name="campusschedule" class="p.LoginAction"
+			method="campusretrieve">
+			<result name="success">/campusschedule.jsp</result>
+		</action>
+
+		<action name="retrieveschedule" class="p.LoginAction"
+			method="retrieveschedule">
+			<result name="success">/campusschedule.jsp</result>
+		</action>
+
+		<action name="showschedule" class="p.LoginAction"
+			method="showschedule">
+			<result name="success">/campusschedule.jsp</result>
+		</action>
+
+
+
+		<action name="examschedule" class="p.LoginAction"
+			method="examschedule">
+			<result name="success">/campusschedule.jsp</result>
+		</action>
+
+
+		<action name="examsyllabus" class="p.LoginAction"
+			method="examsyllabus">
+			<result name="success">/campussyllabus.jsp</result>
+		</action>
+
+
+		<action name="campussyllabus1" class="p.LoginAction"
+			method="campussyllabus1">
+			<result name="success">/campussyllabus.jsp</result>
+		</action>
+
+		<action name="hallticket" class="p.LoginAction"
+			method="hallticket">
+			<result name="success">/hallticketinf.jsp</result>
+		</action>
+
+		<action name="showhallticketinf" class="p.LoginAction"
+			method="showhallticketinf">
+			<result name="success">/hallticketinf.jsp</result>
+		</action>
+
+
+
+		<action name="inserthallticket" class="p.LoginAction"
+			method="inserthallticket">
+			<result name="success">/hallticketinf.jsp</result>
+		</action>
+
+
+
+		<action name="viewhalltickt12" class="p.LoginAction"
+			method="viewhalltickt12">
+			<result name="hallticket">/viewhallticket.jsp</result>
+			<result name="succ">/register2.jsp</result>
+		</action>
+
+		<action name="viewhalticktinfo" class="p.LoginAction"
+			method="viewhalticktinfo">
+			<result name="hallticket">/viewhallticket.jsp</result>
+			<result name="succ">/register2.jsp</result>
+
+		</action>
+
+		<action name="question" class="p.LoginAction" method="question">
+			<result name="success">/Question.jsp</result>
+		</action>
+
+
+		<action name="fillinfo" class="p.LoginAction" method="fillinfo">
+			<result name="infview">/12.jsp</result>
+		</action>
+
+		<action name="exam" class="p.LoginAction" method="exam">
+			<result name="infview">/11.jsp</result>
+		</action>
+
+
+
+		<action name="exam12" class="p.LoginAction" method="exam12">
+			<result name="infview">/13.jsp</result>
+		</action>
+
+		<action name="exam1" class="p.LoginAction" method="exam1">
+			<result name="infview">/14.jsp</result>
+		</action>
+
+		<action name="exam2" class="p.LoginAction" method="exam2">
+			<result name="infview">/15.jsp</result>
+		</action>
+
+
+		<action name="exam3" class="p.LoginAction" method="exam3">
+			<result name="infview">/6.jsp</result>
+		</action>
+
+		<action name="exam4" class="p.LoginAction" method="exam4">
+			<result name="infview">/7.jsp</result>
+		</action>
+
+		<action name="exam5" class="p.LoginAction" method="exam5">
+			<result name="infview">/8.jsp</result>
+		</action>
+
+		<action name="exam6" class="p.LoginAction" method="exam6">
+			<result name="infview">/9.jsp</result>
+		</action>
+		<action name="exam7" class="p.LoginAction" method="exam7">
+			<result name="infview">/10.jsp</result>
+		</action>
+
+		<action name="exam8" class="p.LoginAction" method="exam8">
+			<result name="infview">/result.jsp</result>
+		</action>
+
+		<action name="answer" class="p.LoginAction" method="answer">
+			<result name="infview">/viewquestion.jsp</result>
+		</action>
+
+
+		<action name="bankdet" class="p.LoginAction" method="bankdet">
+			<result name="success">/register1.jsp</result>
+		</action>
+
+		<action name="cancel" class="p.LoginAction" method="cancel">
+			<result name="cancel">/register2.jsp</result>
+		</action>
+
+		<action name="selectjobclose" class="p.LoginAction"
+			method="selectCloseJob">
+			<result name="selectclosejob1">/selectjobclose.jsp</result>
+		</action>
+		<action name="closejob" class="p.LoginAction"
+			method="valueCloseJob">
+			<result name="closejob1">/jobclose.jsp</result>
+		</action>
+		<action name="closejob1" class="p.LoginAction"
+			method="CloseJob">
+			<result name="closejob11">/jobclose.jsp</result>
+		</action>
+
+		<action name="applyjob" class="p.LoginAction"
+			method="selectapplyjob">
+			<result name="successapp">/applyjob.jsp</result>
+			<result name="success23">/message.jsp</result>
+		</action>
+		<action name="applyjob111" class="p.LoginAction"
+			method="JobApply">
+			<result name="successapp">/applyjob.jsp</result>
+
+		</action>
+
+		<action name="showjobseekresume" class="p.LoginAction"
+			method="showjobseekresume">
+			<result name="showjobseekresume">/shoejobseekresume.jsp</result>
+		</action>
+
+		<action name="combo1234" class="p.UploadDownload"
+			method="selectImage">
+			<result name="combo1234">/combo1234.jsp</result>
+		</action>
+
+		<action name="approvestatus" class="p.LoginAction"
+			method="approvestatus">
+			<result name="approvestatus">/viewresult.jsp</result>
+		</action>
+		<action name="downloadImage" class="p.UploadDownload"
+			method="downloadImage">
+			<result name="success" type="stream">
+				<param name="contentType">application/msword</param>
+				<param name="inputName">fileinputstream1</param>
+				<param name="contentDisposition">attachment;filename="download.doc"</param>
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
+
+	</package>
+</struts>    
